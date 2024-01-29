@@ -1,9 +1,10 @@
 ---
+import BarraCeleste from "./BarraCeleste.astro";
 import SeparadorMobile from "./SeparadorMobile.astro";
 import TituloSeparador from "./TituloSeparador.astro";
 ---
 
-<section class="xs:h-screen h-[90vh] text-white">
+<section class={`${Astro.props.class} xs:h-screen h-[90vh] text-white`}>
     <SeparadorMobile numero="02"/>
     <TituloSeparador primerTexto="FEED+" segundoTexto="HISTORIAS"/>
     <div class="grid grid-cols-4 grid-rows-4 gap-3 text-white content-center mb-10">
@@ -27,8 +28,7 @@ import TituloSeparador from "./TituloSeparador.astro";
         </div>
     </div>
     <div class="flex">
-        <span class="w-10 h-28 xs:h-16 bg-[#00f0ff]">
-        </span>
+        <BarraCeleste />
         <p class="px-5 text-balance text-xl xs:text-sm xs:px-3 font-light self-center">
             publicaciones e historias donde transmitimos la <strong class="font-semibold">escencia</strong> de tu proyecto, a tus <strong class="font-semibold">potenciales clientes</strong>.
         </p>

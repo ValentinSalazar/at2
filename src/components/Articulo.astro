@@ -1,0 +1,12 @@
+---
+const { numero, titulo, texto } = Astro.props;
+---
+<article class="border w-full h-full rounded flex flex-col px-5 py-2">
+    <header class="flex w-full justify-between">
+        <h1 class="xs:text-xl font-light ">{numero} <strong class="text-[#00f0ff] font-black px-2">{titulo}</strong></h1>
+        <img id="botonFlecha" src="/arrow.svg" alt="" class="rotate-180 cursor-pointer">
+    </header>
+    <p class="hidden xs:text-sm py-3">{texto}</p>
+</article>
+
+

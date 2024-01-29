@@ -4,7 +4,7 @@ import IconoRedSocial from './IconoRedSocial.astro';
 import TituloSeparador from './TituloSeparador.astro';
 import SeparadorMobile from './SeparadorMobile.astro'
 ---
-<section class="xs:h-[80vh] h-[80vh] xs:flex xs:flex-col xs:justify-center">
+<section class={`${Astro.props.class } xs:h-[80vh] h-[80vh] xs:flex xs:flex-col xs:justify-center`}>
     <TituloSeparador primerTexto="AGENCIA" segundoTexto="CREATIVA" class="xs:pt-0"/>
     <div class="flex justify-center xs:pt-0 pt-10">
         <img src="/comilla.png" alt="Comillas separadoras de titulo." class="xs:scale-75">

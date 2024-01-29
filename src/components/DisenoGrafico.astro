@@ -4,7 +4,7 @@ import SeparadorMobile from './SeparadorMobile.astro';
 import TituloSeparador from './TituloSeparador.astro';
 ---
 
-<section class="xs:h-screen h-[90vh] flex flex-col items-center mb-20">
+<section class={`${Astro.props.class} xs:h-screen h-[90vh] flex flex-col items-center mb-20`}>
     <SeparadorMobile numero="01"/>
 
     <TituloSeparador primerTexto="DISEÑO" segundoTexto="GRAFICO+" class="xs:pt-14"/>

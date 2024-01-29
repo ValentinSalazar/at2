@@ -18,9 +18,11 @@ import Navbar from '../components/Navbar.astro';
 		<title>{title}</title>
 	</head>
 	<body class="overflow-x-hidden w-screen h-screen">
-		<Navbar />
+		<header>
+			<Navbar />
+		</header>
+		<button class="xs:w-10 xs:h-10 w-14 h-14 rounded-full border fixed right-2 bottom-2 z-[100]"></button>
 		<slot />
-		
 	</body>
 </html>
 <style is:global>
