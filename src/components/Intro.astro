@@ -1,24 +1,28 @@
 ---
 import Contacto from '../components/Contacto.astro';
+import IconoRedSocial from './IconoRedSocial.astro';
+import TituloSeparador from './TituloSeparador.astro';
+import SeparadorMobile from './SeparadorMobile.astro'
 ---
-<section class="h-screen">
-    <div>
-        <h1 class="text-6xl md:px-20 pt-20 font-black text-[#00F0FF] text-center">AGENCIA</h1>
-        <h1 class="text-6xl md:px-20 font-black text-[#00F0FF] text-center">CREATIVA</h1>
+<section class="xs:h-[80vh] h-[80vh] xs:flex xs:flex-col xs:justify-center">
+    <TituloSeparador primerTexto="AGENCIA" segundoTexto="CREATIVA" class="xs:pt-0"/>
+    <div class="flex justify-center xs:pt-0 pt-10">
+        <img src="/comilla.png" alt="Comillas separadoras de titulo." class="xs:scale-75">
     </div>
-    <div class="flex justify-center pt-10">
-        <img src="/comilla.png" alt="">
-    </div>
-    <div class="pt-10 flex flex-col items-center">
-        <h3 class="text-white text-7xl font-bold">DISEÑO</h3>
-        <h3 class="text-white text-[2.3rem] leading-none">& DESARROLLO</h3>
+    <div class="xs:pt-5 pt-10 flex flex-col items-center">
+        <h3 class="text-white text-7xl font-bold xs:text-5xl">DISEÑO</h3>
+        <h3 class="text-white text-[2.3rem] leading-none xs:text-2xl">& DESARROLLO</h3>
     </div>
     <div class="flex flex-col gap-5">
-        <p class="text-center text-lg pt-5 text-white font-light">
-            <span class="text-[#00f0ff] font-bold">ideas innovadoras</span> para impulsar negocios digitales
+        <p class="text-center text-lg pt-5 text-white font-light text-balance px-5">
+            <strong class="text-[#00f0ff] font-bold">ideas innovadoras</strong> para impulsar negocios digitales
         </p>
         <Contacto />
         <p class="text-white font-light text-center">buenos aires, argentina.</p>
     </div>
-    Redes sociales
+    <footer class="flex justify-center pt-5 gap-5">
+        <IconoRedSocial link="/instagramIcon.svg"/>
+        <IconoRedSocial link="/linkedinIcon.svg"/>
+    </footer>
+    <!-- <img src="./iconoMouse.svg" alt="" class="flex justify-center w-screen h-[40px] mt-5"> -->
 </section>
