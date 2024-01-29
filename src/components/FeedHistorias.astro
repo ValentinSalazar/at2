@@ -1,4 +1,40 @@
 ---
+import SeparadorMobile from "./SeparadorMobile.astro";
+import TituloSeparador from "./TituloSeparador.astro";
 ---
 
-<h1>02 Feed and historias</h1>
+<section class="xs:h-screen h-[90vh] text-white">
+    <SeparadorMobile numero="02"/>
+    <TituloSeparador primerTexto="FEED+" segundoTexto="HISTORIAS"/>
+    <div class="grid grid-cols-4 grid-rows-4 gap-3 text-white content-center mb-10">
+        <div class="col-start-1 col-end-3 row-start-1 row-end-3 max-h-32">
+            primer historia
+        </div>
+        <div class="col-start-3 col-end-5 row-start-1 row-end-3 max-h-32">
+            primer historia
+        </div>
+        <div class="col-start-1 col-end-5 max-h-60 max-w-full">
+            publicacion
+        </div>
+        <div class="col-start-1 col-end-3 max-h-20">
+            publicacion chica
+        </div>
+        <div class="col-start-3 col-end-5 max-h-20">
+            publicacion chica
+        </div>
+        <div class="hidden">
+            publicacion chica
+        </div>
+    </div>
+    <div class="flex">
+        <span class="w-10 h-28 xs:h-16 bg-[#00f0ff]">
+        </span>
+        <p class="px-5 text-balance text-xl xs:text-sm xs:px-3 font-light self-center">
+            publicaciones e historias donde transmitimos la <strong class="font-semibold">escencia</strong> de tu proyecto, a tus <strong class="font-semibold">potenciales clientes</strong>.
+        </p>
+    </div>
+    <footer class="mt-10">
+        <h1 class="xs:text-xl font-bold text-3xl">posts & historias+</h1>
+        <p class="xs:text-sm text-lg font-light text-balance">adaptables a todas las plataformas digitales.</p>
+    </footer>
+</section>
