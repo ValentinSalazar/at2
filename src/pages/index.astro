@@ -4,16 +4,24 @@ import '@fontsource/poppins/200.css';
 import '@fontsource/poppins/400.css';
 import '@fontsource/poppins/800.css';
 import '@fontsource-variable/montserrat';
-import DisenoGrafico from '../components/DisenoGrafico.astro';
-import Intro from '../components/Intro.astro';
-import FeedHistorias from '../components/FeedHistorias.astro';
-import LandingPage from '../components/LandingPage.astro';
-import Posicionamiento from '../components/Posicionamiento.astro';
-import Clientes from '../components/Clientes.astro';
+import DisenoGrafico from '../components/secciones/DisenoGrafico.astro';
+import Intro from '../components/secciones/Intro.astro';
+import FeedHistorias from '../components/secciones/FeedHistorias.astro';
+import LandingPage from '../components/secciones/LandingPage.astro';
+import Posicionamiento from '../components/secciones/Posicionamiento.astro';
+import Clientes from '../components/secciones/Clientes.astro';
+import Contacto from '../components/secciones/Contacto.astro';
 ---
 
 <Layout title="atenea">
 	<img src="/eclipse.png" alt="" class="absolute right-0 md:hidden">
+	<!-- <svg id="svg" class="absolute right-0" width="356" height="649" viewBox="0 0 356 649" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<circle cx="598.062" cy="51.0617" r="512.5" transform="rotate(15.5321 598.062 51.0617)" stroke="black" stroke-width="150"/>
+	  </svg> -->
+	  
+	  
+		
+	<!-- <img src="/elipse2.svg" alt="" class="absolute right-0"> -->
 	<main class="w-screen h-screen relative z-20 py-20">
 		<Intro class="px-10"/>
 		<DisenoGrafico class="px-10"/>
@@ -21,10 +29,12 @@ import Clientes from '../components/Clientes.astro';
 		<LandingPage />
 		<Posicionamiento class="px-10"/>
 		<Clientes />
+		<Contacto />
 	</main>
 </Layout>
 
 <style is:global>
+
 	h1{
 		font-family: 'Montserrat Variable', sans-serif;
 	}
