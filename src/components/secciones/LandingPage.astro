@@ -1,0 +1,42 @@
+---
+import Contacto from "../BotonContacto.astro";
+import SeparadorMobile from "../SeparadorMobile.astro";
+import TituloSeparador from "../TituloSeparador.astro";
+---
+<section id="sectionLandingPage" class="text-white relative bg-right bg-cover bg-no-repeat">
+    <div class="bg-black/50 h-full flex flex-col items-center pb-20">
+        <SeparadorMobile numero="03" class="top-[-24px]"/>
+        <TituloSeparador primerTexto="LANDING" segundoTexto="PAGE+"/>
+        <p class="xs:text-sm text-balance font-light text-xl text-center max-w-xl"><strong class="font-bold">tu propia página web</strong>, construida con la última tecnología, optimizada para funcionar en cualquier dispositivo movil.</p>
+        <img src="/landing.png" alt="" class="my-5">
+        <h1 class="text-center mb-5 font-black text-3xl text-[#00f0ff]">¿QUE INCLUYE?</h1>
+        <ol class="flex flex-col gap-3 mb-5">
+           <li>
+                <h3 class="text-2xl font-bold">DOMINIO PROPIO</h3>
+                <p class="">dominio web personalizado,</p>
+                <p class="text-sm font-light text-white/80">www.atenea.com.ar</p>
+           </li>
+           <li>
+            <h3 class="text-2xl font-bold">DISENO WEB</h3>
+            <p class="">diseñamos tu web a medida,</p>
+            <p class="text-sm font-light text-white/80">100% personalizada.</p>
+       </li>
+       <li>
+        <h3 class="text-2xl font-bold">DESARROLLO</h3>
+        <p class="">con las mejores tecnologias,</p>
+        <p class="text-sm font-light text-white/80">el mejor rendimiento.</p>
+   </li>
+        </ol>
+        <Contacto class="w-[300px]"/>
+    </div>
+    
+</section>
+
+<style>
+    #sectionLandingPage{
+        background-image: url('fondo03.png');
+    }
+    h3{
+        font-weight: 'Montserrat';
+    }
+</style>

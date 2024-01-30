@@ -1,0 +1,18 @@
+---
+import ContenedorClientes from "../ContenedorClientes.astro";
+import TituloSeparador from "../TituloSeparador.astro";
+
+---
+
+<section class="bg-white h-screen pt-20 border-red-500" style="clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);">
+    <TituloSeparador primerTexto="NUESTROS" segundoTexto="CLIENTES+" class="[&>h1]:text-[#525252]"/>
+    <ContenedorClientes />
+</section>
+
+<style>
+    section{
+        background-image: url('./atenea3.png');
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+</style>

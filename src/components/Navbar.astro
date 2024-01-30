@@ -1,4 +1,4 @@
-<nav class="absolute px-10 md:px-20 py-10 flex items-center justify-between h-16 w-screen text-white z-50">
+<nav class="fixed px-10 md:px-20 py-10 flex items-center justify-between h-16 w-screen text-white z-50">
     <div class="flex items-center gap-2 md:gap-5 w-full">
         <svg
             width="32"
@@ -63,7 +63,7 @@
 </nav>
 
 <!-- hidden <-> flex -->
-<ul class="z-[99] hidden absolute w-[65%] h-[60%] bg-[#00F0FF] right-0 rounded-bl-[200px] shadow-2xl flex-col items-center justify-center gap-10"
+<ul class="z-[99] hidden fixed w-[65%] h-[60%] bg-[#00F0FF] right-0 rounded-bl-[200px] shadow-2xl flex-col items-center justify-center gap-10"
     id="navMobile">
     <li class="font-bold py-3 px-10 bg-[#1A1E21] rounded-bl-lg rounded-tl-sm rounded-tr-sm">
         <a href="" class="text-white">inicio</a>
@@ -94,7 +94,14 @@
     }
 </style>
 
-<script>import type { Code } from "astro:components"
+<script>
+    function toggleBlur() {
+        if (window.scrollY > 0) {
+            navCompleto.classList.add('backdrop-blur');
+        } else {
+            navCompleto.classList.remove('backdrop-blur');
+        }
+    }
 
     const navMobile = document.querySelector('#navMobile')
     const btnMobile = document.querySelector('#btnMobile')
@@ -108,4 +115,12 @@
         navMobile.classList.remove('flex')
         navMobile.classList.add('hidden')
     })
+
+    const navCompleto = document.querySelector('nav')
+    if(navCompleto.scrollHeight < 80) {
+        navCompleto.classList.add('backdrop-blur')
+    }
+
+    window.addEventListener('scroll', toggleBlur);
+    toggleBlur();
 </script>
