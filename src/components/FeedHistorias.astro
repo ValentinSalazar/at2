@@ -4,24 +4,28 @@ import SeparadorMobile from "./SeparadorMobile.astro";
 import TituloSeparador from "./TituloSeparador.astro";
 ---
 
-<section class={`${Astro.props.class} xs:h-screen h-[90vh] text-white`}>
+<section class={`${Astro.props.class} text-white pb-10`}>
     <SeparadorMobile numero="02"/>
     <TituloSeparador primerTexto="FEED+" segundoTexto="HISTORIAS"/>
-    <div class="grid grid-cols-4 grid-rows-4 gap-3 text-white content-center mb-10">
-        <div class="col-start-1 col-end-3 row-start-1 row-end-3 max-h-32">
-            primer historia
+    <div class="grid grid-cols-2 grid-rows-[35vh,30vh,20vh] gap-3 text-white mb-5">
+
+        <div class="col-span-1 row-span-1">
+            <img src="" alt="" class="h-full w-full">
         </div>
-        <div class="col-start-3 col-end-5 row-start-1 row-end-3 max-h-32">
-            primer historia
+        <div class="col-start-2 col-end-3">
+            <img src="" alt="" class="h-full w-full">
         </div>
-        <div class="col-start-1 col-end-5 max-h-60 max-w-full">
-            publicacion
+
+        <div class="col-start-1 col-end-3">
+            <img src="" alt="" class="h-full w-full">
+        
         </div>
-        <div class="col-start-1 col-end-3 max-h-20">
-            publicacion chica
+
+        <div class="col-start-1 col-end-2 row-span-1">
+            <img src="" alt="" class="w-full h-full">
         </div>
-        <div class="col-start-3 col-end-5 max-h-20">
-            publicacion chica
+        <div class="col-start-2 col-end-3">
+            <img src="" alt="" class="w-full h-full">
         </div>
         <div class="hidden">
             publicacion chica
