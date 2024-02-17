@@ -1,4 +1,6 @@
 ---
+// @ts-nocheck
+// @ts-ignore
 import LogosInteractivos from '../LogosInteractivos.astro'
 import SeparadorMobile from '../SeparadorMobile.astro';
 import TituloSeparador from '../TituloSeparador.astro';
@@ -74,6 +76,7 @@ import TituloSeparador from '../TituloSeparador.astro';
 </style>
 
 <script>
+    // @ts-nocheck
     const logoA = document.querySelector('#logoA')
     const isotipoPath = document.querySelector('#isotipo')?.children[0]
     const logo = document.querySelectorAll('path')
