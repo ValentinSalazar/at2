@@ -1,27 +1,67 @@
 ---
 import Contacto from '../BotonContacto.astro';
 import IconoRedSocial from '../IconoRedSocial.astro';
+import Logo from '../Logo.astro';
 import TituloSeparador from '../TituloSeparador.astro';
 ---
-<section class={`${Astro.props.class } xs:h-[80vh] h-[80vh] xs:flex xs:flex-col xs:justify-center`}>
-    <TituloSeparador primerTexto="AGENCIA" segundoTexto="CREATIVA" class="xs:pt-0"/>
-    <div class="flex justify-center xs:pt-0 pt-10">
-        <img src="/comilla.png" alt="Comillas separadoras de titulo." class="xs:scale-75">
+<section id="introSection" class={`${Astro.props.class } h-[95vh] flex flex-col justify-center md:flex-row relative`}>
+
+    <div class="hidden md:flex md:left-[3.087rem] md:flex-col md:items-center md:justify-center">
+        <p class="rotate-[-90deg] w-10 pl-5 text-xl text-[#2f2f2f] relative top-20">deslizá</p>
+        <img src="/mouse.svg" alt="desliza hacia abajo" class="relative top-20">
     </div>
-    <div class="xs:pt-5 pt-10 flex flex-col items-center">
+
+    <div class="md:w-[50%] pt-20 flex flex-col gap-20">
+        <TituloSeparador primerTexto="AGENCIA" segundoTexto="CREATIVA" class="xs:pt-0 md:[&>h1]:text-7xl lg:[&>h1]:text-8xl"/>
+       
+            <div class="hidden md:flex md:gap-5 self-center md:pl-10">
+                <div class="flex justify-center xs:pt-0 md:h-10 lg:h-20">
+                    <svg viewBox="0 0 82 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path id="comillas" d="M0 41.0964L19.1365 0H35.1359L21.9599 37.6456H33.2536V70.8992H0V41.0964ZM46.4295 41.0964L65.566 0H81.5654L68.3895 37.6456H79.6831V70.8992H46.4295V41.0964Z" fill="#00F0FF"/>
+                        </svg>
+                        
+                </div>
+                <p class="hidden md:flex text-white text-sm max-w-md font-light lowercase md:text-xs lg:text-base">En nuestra agencia de Marketing, Diseño Gráfico 
+                    y Desarrollo Web, hemos perfeccionado nuestras 
+                    habilidades  para brindar soluciones innovadoras 
+                    y efectivas a nuestros clientes.</p>
+            </div>
+
+            <Contacto class="hidden md:w-[20vw]"/>
+            
+            
+    </div>
+
+
+    <div class="figuras w-[50%] hidden md:flex pt-20 md:justify-center md:items-center">
+        <Logo color="#fff" class="w-60 h-60 md:w-96 md:h-96 relative left-[5vw]"/>
+    </div>
+
+    <div class="xs:pt-5 pt-10 flex flex-col items-center md:hidden">
         <h3 class="text-white text-7xl font-bold xs:text-5xl">DISEÑO</h3>
         <h3 class="text-white text-[2.3rem] leading-none xs:text-2xl">& DESARROLLO</h3>
     </div>
-    <div class="flex flex-col gap-5">
+    <div class="flex flex-col gap-5 md:hidden">
         <p class="text-center text-lg pt-5 text-white font-light text-balance px-5">
-            <strong class="text-[#00f0ff] font-bold">ideas innovadoras</strong> para impulsar negocios digitales
+            <strong id="ideasInnovadoras" class="font-bold" style="color:#00f0ff ;">ideas innovadoras</strong> para impulsar negocios digitales
         </p>
         <Contacto />
         <p class="text-white font-light text-center">buenos aires, argentina.</p>
     </div>
-    <footer class="flex justify-center pt-5 gap-5">
-        <IconoRedSocial link="/instagramIcon.svg"/>
-        <IconoRedSocial link="/linkedinIcon.svg"/>
+    <footer class="flex justify-center pt-5 gap-5 md:hidden">
+        <a href="">
+            <svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.4365 11.7813C13.0007 11.7813 11.0261 13.8418 11.0261 16.3835C11.0261 18.9253 13.0007 20.9857 15.4365 20.9857C17.8723 20.9857 19.8469 18.9253 19.8469 16.3835C19.8469 13.8418 17.8723 11.7813 15.4365 11.7813Z" fill="#00F0FF"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.80994C0 0.962691 0.658173 0.275879 1.47014 0.275879H28.6678C29.4798 0.275879 30.1379 0.962691 30.1379 1.80994V30.1901C30.1379 31.0373 29.4798 31.7242 28.6678 31.7242H1.47014C0.658173 31.7242 0 31.0373 0 30.1901V1.80994ZM6.61564 16.3835C6.61564 11.3001 10.5649 7.17916 15.4365 7.17916C20.3081 7.17916 24.2574 11.3001 24.2574 16.3835C24.2574 21.467 20.3081 25.5879 15.4365 25.5879C10.5649 25.5879 6.61564 21.467 6.61564 16.3835ZM24.2574 7.94619C25.0693 7.94619 25.7275 7.25938 25.7275 6.41213C25.7275 5.56488 25.0693 4.87807 24.2574 4.87807C23.4454 4.87807 22.7872 5.56488 22.7872 6.41213C22.7872 7.25938 23.4454 7.94619 24.2574 7.94619Z" fill="#00F0FF"/>
+                </svg>
+                
+        </a>
+        <a href="">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M29.6746 0.276099H2.87712C2.5759 0.27194 2.27679 0.326804 1.9969 0.437558C1.717 0.548311 1.4618 0.712784 1.24586 0.921584C1.02992 1.13038 0.857476 1.37942 0.738376 1.65447C0.619275 1.92952 0.55585 2.2252 0.551723 2.52462V29.4754C0.55585 29.7748 0.619275 30.0705 0.738376 30.3456C0.857476 30.6206 1.02992 30.8696 1.24586 31.0784C1.4618 31.2872 1.717 31.4517 1.9969 31.5625C2.27679 31.6732 2.5759 31.7281 2.87712 31.7239H29.6746C29.9758 31.7281 30.2749 31.6732 30.5548 31.5625C30.8347 31.4517 31.0899 31.2872 31.3059 31.0784C31.5218 30.8696 31.6942 30.6206 31.8133 30.3456C31.9324 30.0705 31.9959 29.7748 32 29.4754V2.52462C31.9959 2.2252 31.9324 1.92952 31.8133 1.65447C31.6942 1.37942 31.5218 1.13038 31.3059 0.921584C31.0899 0.712784 30.8347 0.548311 30.5548 0.437558C30.2749 0.326804 29.9758 0.27194 29.6746 0.276099ZM10.0906 26.5979H5.3449V12.4464H10.0906V26.5979ZM7.71775 10.4652C7.06326 10.4652 6.43557 10.2068 5.97277 9.74675C5.50998 9.28674 5.24998 8.66282 5.24998 8.01227C5.24998 7.36171 5.50998 6.7378 5.97277 6.27778C6.43557 5.81777 7.06326 5.55934 7.71775 5.55934C8.06529 5.52016 8.41723 5.55439 8.75054 5.65978C9.08385 5.76518 9.391 5.93937 9.65188 6.17094C9.91277 6.4025 10.1215 6.68623 10.2644 7.00355C10.4073 7.32086 10.4812 7.6646 10.4812 8.01227C10.4812 8.35993 10.4073 8.70367 10.2644 9.02098C10.1215 9.3383 9.91277 9.62203 9.65188 9.8536C9.391 10.0852 9.08385 10.2594 8.75054 10.3647C8.41723 10.4701 8.06529 10.5044 7.71775 10.4652ZM27.2068 26.5979H22.4611V19.0033C22.4611 17.1007 21.7809 15.8585 20.0566 15.8585C19.523 15.8624 19.0034 16.0288 18.5678 16.3352C18.1322 16.6417 17.8016 17.0734 17.6205 17.5724C17.4967 17.942 17.443 18.3312 17.4623 18.7203V26.5822H12.7166V12.4307H17.4623V14.4276C17.8934 13.684 18.5204 13.0715 19.2759 12.6559C20.0313 12.2402 20.8864 12.0374 21.7493 12.069C24.9131 12.069 27.2068 14.0974 27.2068 18.4529V26.5979Z" fill="#00F0FF"/>
+                </svg>
+                
+        </a>
     </footer>
-    <!-- <img src="./iconoMouse.svg" alt="" class="flex justify-center w-screen h-[40px] mt-5"> -->
 </section>
+

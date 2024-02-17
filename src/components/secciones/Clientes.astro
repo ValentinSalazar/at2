@@ -4,7 +4,7 @@ import TituloSeparador from "../TituloSeparador.astro";
 
 ---
 
-<section class="bg-white h-screen pt-20 border-red-500" style="clip-path: polygon(100% 0, 100% 85%, 0 100%, 0 15%);">
+<section id="clientesSection" style="border-top: 8px solid #00f0ff;" class="pt-[80px] bg-white relative z-50">
     <TituloSeparador primerTexto="NUESTROS" segundoTexto="CLIENTES+" class="[&>h1]:text-[#525252]"/>
     <ContenedorClientes />
 </section>
@@ -14,5 +14,6 @@ import TituloSeparador from "../TituloSeparador.astro";
         background-image: url('./atenea3.png');
         background-position: right;
         background-repeat: no-repeat;
+        clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
     }
 </style>

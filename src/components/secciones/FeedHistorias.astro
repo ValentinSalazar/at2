@@ -4,41 +4,49 @@ import SeparadorMobile from "../SeparadorMobile.astro";
 import TituloSeparador from "../TituloSeparador.astro";
 ---
 
-<section class={`${Astro.props.class} text-white pb-10`}>
-    <SeparadorMobile numero="02"/>
-    <TituloSeparador primerTexto="FEED+" segundoTexto="HISTORIAS"/>
-    <div class="grid grid-cols-2 grid-rows-[35vh,30vh,20vh] gap-3 text-white mb-5">
+<section class={`${Astro.props.class} relative text-white pb-10 pt-40 md:pt-0 md:px-40 lg:px-60`}>
+    <SeparadorMobile numero="02" class="md:hidden"/>
+    <div class="absolute left-0 hidden md:flex h-2 items-center gap-5 pt-10">
+        <span class="bg-white w-28 border-2 left-0"></span>
+        <h1 class="text-white font-black text-5xl">02</h1>
+        <TituloSeparador primerTexto="FEED+" segundoTexto="HISTORIAS" class="md:items-start pt-20"/>
+    </div>
+    <TituloSeparador primerTexto="FEED+" segundoTexto="HISTORIAS" class="md:hidden"/>
+
+
+
+    <div class="pt-48 grid grid-cols-2 md:grid-cols-[350px,350px] grid-rows-[300px,200px,150px] gap-3 text-white mb-5 place-content-center">
 
         <div class="col-span-1 row-span-1">
-            <img src="" alt="" class="h-full w-full">
+            <img src="" alt="" class="h-full w-full max-w-[350px]">
         </div>
-        <div class="col-start-2 col-end-3">
-            <img src="" alt="" class="h-full w-full">
+        <div class="col-start-2 col-end-3 ">
+            <img src="" alt="" class="h-full w-full max-w-[350px]">
         </div>
 
-        <div class="col-start-1 col-end-3">
-            <img src="" alt="" class="h-full w-full">
-        
+        <div class="col-start-1 col-end-3 flex justify-center">
+            <img src="" alt="" class="h-full w-full max-w-[750px] ">
         </div>
 
         <div class="col-start-1 col-end-2 row-span-1">
-            <img src="" alt="" class="w-full h-full">
+            <img src="" alt="" class="h-full w-full max-w-[350px]">
         </div>
         <div class="col-start-2 col-end-3">
-            <img src="" alt="" class="w-full h-full">
+            <img src="" alt="" class="h-full w-full max-w-[350px]">
         </div>
         <div class="hidden">
             publicacion chica
         </div>
     </div>
-    <div class="flex">
-        <BarraCeleste />
-        <p class="px-5 text-balance text-xl xs:text-sm xs:px-3 font-light self-center">
+    <div class="flex md:flex-col md:items-center">
+        <BarraCeleste class="md:hidden"/>
+        <hr class="border-2 w-[75%] hidden md:flex" style="border-color: #00f0ff;"></hr>
+        <p class="px-5 text-balance text-xl xs:text-sm xs:px-3 font-light self-center md:text-center md:text-pretty md:pt-3">
             publicaciones e historias donde transmitimos la <strong class="font-semibold">escencia</strong> de tu proyecto, a tus <strong class="font-semibold">potenciales clientes</strong>.
         </p>
     </div>
     <footer class="mt-10">
-        <h1 class="xs:text-xl font-bold text-3xl">posts & historias+</h1>
-        <p class="xs:text-sm text-lg font-light text-balance">adaptables a todas las plataformas digitales.</p>
+        <h1 class="xs:text-xl font-bold text-3xl md:text-center">posts & historias+</h1>
+        <p class="xs:text-sm text-lg font-light text-balance md:text-center">adaptables a todas las plataformas digitales.</p>
     </footer>
 </section>

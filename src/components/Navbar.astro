@@ -1,4 +1,4 @@
-<nav class="fixed px-10 md:px-20 py-10 flex items-center justify-between h-16 w-screen text-white z-50">
+<nav class="fixed px-10 md:px-20 py-10 flex items-center justify-between h-16 w-screen text-white z-50 duration-200">
     <div class="flex items-center gap-2 md:gap-5 w-full">
         <svg
             width="32"
@@ -11,23 +11,20 @@
                 d="M27.3248 19.4201L23.9872 13.1361L20.3364 6.25759L17.0155 0H16.9845L13.6636 6.25759L0 32H6.67281L17.0012 12.5415L20.652 19.4201L13.9744 32H20.6472L23.9872 25.7064L27.3272 32H34L27.3248 19.4201Z"
                 fill="#00F0FF"></path>
         </svg>
-        <h1 class="self-end leading-none text-2xl font-medium font-[poppins]">atenea</h1>
+        <h2 class="self-end leading-none text-2xl font-medium font-[poppins]">atenea</h2>
     </div>
     <ul class="hidden md:flex gap-5">
         <li>
-            <a href="" class="text-[#00F0FF] font-medium">inicio</a>
+            <a href="#introSection" class="text-[#00F0FF] font-medium">inicio</a>
         </li>
         <li>
-            <a href="">servicios</a>
+            <a href="#serviciosSection">servicios</a>
         </li>
         <li>
-            <a href="">contacto</a>
+            <a href="#clientesSection">clientes</a>
         </li>
         <li>
-            <a href="">clientes</a>
-        </li>
-        <li>
-            <a href="">nosotros</a>
+            <a href="#contactoSection">contacto</a>
         </li>
     </ul>
     <button id="btnMobile" class="md:hidden" type="button">
@@ -63,22 +60,20 @@
 </nav>
 
 <!-- hidden <-> flex -->
-<ul class="z-[99] hidden fixed w-[65%] h-[60%] bg-[#00F0FF] right-0 rounded-bl-[200px] shadow-2xl flex-col items-center justify-center gap-10"
+<ul class="z-[99] hidden fixed w-[65%] h-[60%] bg-[#00F0FF] right-0 rounded-bl-[200px] shadow-2xl flex-col items-center justify-center gap-10 xs:gap-5 [&>li>a]:px-6 [&>li>a]:py-2"
     id="navMobile">
-    <li class="font-bold py-3 px-10 bg-[#1A1E21] rounded-bl-lg rounded-tl-sm rounded-tr-sm">
-        <a href="" class="text-white">inicio</a>
+    <li>
+        <a href="#introSection" class="active">inicio</a>
     </li>
     <li>
-        <a href="">servicios</a>
+        <a href="#serviciosSection" id="toService">servicios</a>
+    </li>
+    
+    <li>
+        <a href="#clientesSection">clientes</a>
     </li>
     <li>
-        <a href="">contacto</a>
-    </li>
-    <li>
-        <a href="">clientes</a>
-    </li>
-    <li>
-        <a href="">nosotros</a>
+        <a href="#contactoSection" id="to">contacto</a>
     </li>
     <button id="exitNavMobile" class="absolute top-6 right-9">
         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="30" viewBox="0 -960 960 960" width="30">
@@ -87,6 +82,14 @@
     </button>
 </ul>
 <style>
+    .active {
+        color: red;
+        background-color: #2f2f2f;
+        font-weight: bold;
+        color: #fff;
+        border-radius: 2px;
+        transition: 0.2s;
+    }
     #navMobile{
         box-shadow: -7px 5px 11px 0px rgba(0,0,0,0.5);
 -webkit-box-shadow: -7px 5px 11px 0px rgba(0,0,0,0.5);
@@ -96,7 +99,7 @@
 
 <script>
     function toggleBlur() {
-        if (window.scrollY > 0) {
+        if (window.scrollY > 90) {
             navCompleto.classList.add('backdrop-blur');
         } else {
             navCompleto.classList.remove('backdrop-blur');
@@ -123,4 +126,42 @@
 
     window.addEventListener('scroll', toggleBlur);
     toggleBlur();
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#navMobile li a");
+
+    function changeNavColor() {
+      const scrollPosition = window.scrollY;
+
+      sections.forEach((section, index) => {
+        const top = section.offsetTop - 100;
+        const bottom = top + section.clientHeight;
+
+        if (scrollPosition >= top && scrollPosition < bottom) {
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+          });
+
+          navLinks[index].classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", changeNavColor);
+
+
+    // function scrollToSection(where, coordenadas){
+    //     console.log(where)
+    //     document.querySelector(where).addEventListener('click', (e)=>{
+    //         console.log(where)
+    //     e.preventDefault();
+    //     window.scrollTo(0, coordenadas)
+    // })
+    // }
+
+
+
+
+  });
 </script>

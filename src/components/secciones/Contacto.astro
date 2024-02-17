@@ -1,7 +1,33 @@
 ---
+import Logo from "../Logo.astro";
+
 
 ---
 
-<section class="border border-red-500">
-    
+<section id="contactoSection" class="relative top-[-100px] pt-[100px] z-10 bg-fixed max-h-screen bg-no-repeat">
+    <div class="flex items-center justify-center gap-3">
+        <Logo color="#00f0ff" class="w-[40px] h-[40px]"/>
+        <h3 class="text-white text-3xl">atenea</h3>
+    </div>
+    <h1 class="text-4xl font-black text-center py-5 text-[#00f0ff] tracking-wide">CONTACTO</h1>
+    <div class="flex flex-col items-center py-5">
+        <h1 class="text-3xl text-[#2f2f2f] font-black text-center">EMAIL</h1>
+        <p class="text-white font-light">ateneamkt@gmail.com</p>
+    </div>
+    <div class="flex flex-col items-center py-5">
+        <h1 class="text-3xl text-[#2f2f2f] font-black text-center">TELEFONO</h1>
+        <p class="text-white font-light">+54 3329-538903</p>
+    </div>
+    <footer class="flex justify-center text-white pb-10">
+        <p class="xs:text-sm text-balance font-light text-xl text-center xs:max-w-52 max-w-sm">no dudes en contactarnos, desarrollemos ese proyecto que tanto desas!</p>
+    </footer>
 </section>
+
+
+<style>
+    section{
+        /* border-left: 5vw solid #fff; */
+        background-image: url('/atenea5.png');
+        background-position: center left;
+    }
+</style>

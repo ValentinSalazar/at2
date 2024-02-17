@@ -11,19 +11,30 @@ import LandingPage from '../components/secciones/LandingPage.astro';
 import Posicionamiento from '../components/secciones/Posicionamiento.astro';
 import Clientes from '../components/secciones/Clientes.astro';
 import Contacto from '../components/secciones/Contacto.astro';
+import IconoRedSocial from '../components/IconoRedSocial.astro'
+import Logo from '../components/Logo.astro'
 ---
 
 <Layout title="atenea">
 	<img src="/eclipse.png" alt="" class="absolute right-0 md:hidden">
-	<!-- <svg id="svg" class="absolute right-0" width="356" height="649" viewBox="0 0 356 649" fill="none" xmlns="http://www.w3.org/2000/svg">
-		<circle cx="598.062" cy="51.0617" r="512.5" transform="rotate(15.5321 598.062 51.0617)" stroke="black" stroke-width="150"/>
-	  </svg> -->
-	  
-	  
+	<img src="/circular2.webp" alt="" class="absolute right-[-30vw] top-[-60vh] hidden md:flex lg:scale-75">
+	<svg id="plus" class="absolute left-20 top-52 scale-50 " width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M30 12H-1.90735e-06V18H30V12Z" fill="#00F0FF"/>
+		<path d="M12 2.62268e-07V30H18L18 0L12 2.62268e-07Z" fill="#00F0FF"/>
+	</svg>
+
+	<svg id="plus" class="absolute left-[50%] top-[10%] scale-50 " width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M30 12H-1.90735e-06V18H30V12Z" fill="#00F0FF"/>
+		<path d="M12 2.62268e-07V30H18L18 0L12 2.62268e-07Z" fill="#00F0FF"/>
+	</svg>
+
+	<svg id="plus" class="absolute left-[70%] top-[35%] scale-50 " width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M30 12H-1.90735e-06V18H30V12Z" fill="#00F0FF"/>
+		<path d="M12 2.62268e-07V30H18L18 0L12 2.62268e-07Z" fill="#00F0FF"/>
+	</svg>
 		
-	<!-- <img src="/elipse2.svg" alt="" class="absolute right-0"> -->
-	<main class="w-screen h-screen relative z-20 py-20">
-		<Intro class="px-10"/>
+	<main class="w-screen relative z-20">
+		<Intro class="px-10 md:px-20"/>
 		<DisenoGrafico class="px-10"/>
 		<FeedHistorias class="px-10"/>
 		<LandingPage />
@@ -31,11 +42,67 @@ import Contacto from '../components/secciones/Contacto.astro';
 		<Clientes />
 		<Contacto />
 	</main>
+	<footer class="relative top-[-100px] bg-[#1a1a1a] z-50 w-full py-3">
+		<div class="flex justify-center items-center pb-5">
+			<Logo color="#fff" class="w-14 h-14"/>
+			<h3 class="text-white text-2xl">atenea</h3>
+		</div>
+		<section class="w-full flex py-5">
+			<div class="flex flex-col w-[50%]">
+				<p class="text-white text-center max-w-32 mx-auto">seguinos en nuestras redes!</p>
+				<div class="flex gap-5 justify-center py-3">
+					<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M29.6746 0.276099H2.87712C2.5759 0.27194 2.27679 0.326804 1.9969 0.437558C1.717 0.548311 1.4618 0.712784 1.24586 0.921584C1.02992 1.13038 0.857476 1.37942 0.738376 1.65447C0.619275 1.92952 0.55585 2.2252 0.551723 2.52462V29.4754C0.55585 29.7748 0.619275 30.0705 0.738376 30.3456C0.857476 30.6206 1.02992 30.8696 1.24586 31.0784C1.4618 31.2872 1.717 31.4517 1.9969 31.5625C2.27679 31.6732 2.5759 31.7281 2.87712 31.7239H29.6746C29.9758 31.7281 30.2749 31.6732 30.5548 31.5625C30.8347 31.4517 31.0899 31.2872 31.3059 31.0784C31.5218 30.8696 31.6942 30.6206 31.8133 30.3456C31.9324 30.0705 31.9959 29.7748 32 29.4754V2.52462C31.9959 2.2252 31.9324 1.92952 31.8133 1.65447C31.6942 1.37942 31.5218 1.13038 31.3059 0.921584C31.0899 0.712784 30.8347 0.548311 30.5548 0.437558C30.2749 0.326804 29.9758 0.27194 29.6746 0.276099ZM10.0906 26.5979H5.3449V12.4464H10.0906V26.5979ZM7.71775 10.4652C7.06326 10.4652 6.43557 10.2068 5.97277 9.74675C5.50998 9.28674 5.24998 8.66282 5.24998 8.01227C5.24998 7.36171 5.50998 6.7378 5.97277 6.27778C6.43557 5.81777 7.06326 5.55934 7.71775 5.55934C8.06529 5.52016 8.41723 5.55439 8.75054 5.65978C9.08385 5.76518 9.391 5.93937 9.65188 6.17094C9.91277 6.4025 10.1215 6.68623 10.2644 7.00355C10.4073 7.32086 10.4812 7.6646 10.4812 8.01227C10.4812 8.35993 10.4073 8.70367 10.2644 9.02098C10.1215 9.3383 9.91277 9.62203 9.65188 9.8536C9.391 10.0852 9.08385 10.2594 8.75054 10.3647C8.41723 10.4701 8.06529 10.5044 7.71775 10.4652ZM27.2068 26.5979H22.4611V19.0033C22.4611 17.1007 21.7809 15.8585 20.0566 15.8585C19.523 15.8624 19.0034 16.0288 18.5678 16.3352C18.1322 16.6417 17.8016 17.0734 17.6205 17.5724C17.4967 17.942 17.443 18.3312 17.4623 18.7203V26.5822H12.7166V12.4307H17.4623V14.4276C17.8934 13.684 18.5204 13.0715 19.2759 12.6559C20.0313 12.2402 20.8864 12.0374 21.7493 12.069C24.9131 12.069 27.2068 14.0974 27.2068 18.4529V26.5979Z" fill="#00F0FF"/>
+						</svg>
+						
+						<svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M15.4365 11.7813C13.0007 11.7813 11.0261 13.8418 11.0261 16.3835C11.0261 18.9253 13.0007 20.9857 15.4365 20.9857C17.8723 20.9857 19.8469 18.9253 19.8469 16.3835C19.8469 13.8418 17.8723 11.7813 15.4365 11.7813Z" fill="#00F0FF"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M0 1.80994C0 0.962691 0.658173 0.275879 1.47014 0.275879H28.6678C29.4798 0.275879 30.1379 0.962691 30.1379 1.80994V30.1901C30.1379 31.0373 29.4798 31.7242 28.6678 31.7242H1.47014C0.658173 31.7242 0 31.0373 0 30.1901V1.80994ZM6.61564 16.3835C6.61564 11.3001 10.5649 7.17916 15.4365 7.17916C20.3081 7.17916 24.2574 11.3001 24.2574 16.3835C24.2574 21.467 20.3081 25.5879 15.4365 25.5879C10.5649 25.5879 6.61564 21.467 6.61564 16.3835ZM24.2574 7.94619C25.0693 7.94619 25.7275 7.25938 25.7275 6.41213C25.7275 5.56488 25.0693 4.87807 24.2574 4.87807C23.4454 4.87807 22.7872 5.56488 22.7872 6.41213C22.7872 7.25938 23.4454 7.94619 24.2574 7.94619Z" fill="#00F0FF"/>
+							</svg>
+							
+		</div>
+			</div>
+			<nav class="w-[50%]">
+				<ul class="text-white flex flex-col items-center">
+					<li>
+						<a href="#introSection">inicio</a>
+					</li>
+					<li>
+						<a href="#serviciosSection">servicios</a>
+					</li>
+					<li>
+						<a href="#clientes">clientes</a>
+					</li>
+					<li>
+						<a href="#contactoSection">contacto</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		
+		<p class="text-white/70 text-xs px-14 text-center font-light">Copyright ©2022 Todos los derechos reservados. Powered by ATENEA</p>
+	</footer>
 </Layout>
 
 <style is:global>
-
+	body {
+		font-family: 'Poppins';
+	}
 	h1{
 		font-family: 'Montserrat Variable', sans-serif;
 	}
 </style>
+
+<script>
+	// Encuentra todos los botones con la clase `alert` en la página.
+	const buttons = document.querySelectorAll('button.alert');
+  
+	// Maneja los clics en cada botón.
+	buttons.forEach((button) => {
+	  button.addEventListener('click', () => {
+		alert('¡El botón ha sido clickeado!');
+	  });
+	});
+  </script>
+
+  
