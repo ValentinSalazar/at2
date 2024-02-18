@@ -11,7 +11,7 @@
                 d="M27.3248 19.4201L23.9872 13.1361L20.3364 6.25759L17.0155 0H16.9845L13.6636 6.25759L0 32H6.67281L17.0012 12.5415L20.652 19.4201L13.9744 32H20.6472L23.9872 25.7064L27.3272 32H34L27.3248 19.4201Z"
                 fill="#00F0FF"></path>
         </svg>
-        <h2 class="self-end leading-none text-2xl font-medium font-[poppins]">atenea</h2>
+        <h2 class="self-end leading-none text-2xl font-medium">atenea</h2>
     </div>
     <ul class="hidden md:flex gap-5">
         <li>
@@ -27,7 +27,7 @@
             <a href="#contactoSection">contacto</a>
         </li>
     </ul>
-    <button id="btnMobile" class="md:hidden" type="button">
+    <button id="btnMobile" class="md:hidden" type="button" name="menu">
         <svg
             width="22"
             height="16"
@@ -75,10 +75,8 @@
     <li>
         <a href="#contactoSection" id="to">contacto</a>
     </li>
-    <button id="exitNavMobile" class="absolute top-6 right-9">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" height="30" viewBox="0 -960 960 960" width="30">
-            <path color="#ffffff" d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
-        </svg>
+    <button id="exitNavMobile" class="absolute top-6 right-9" name="exitMenu">
+        <h2 class="text-white font-semibold text-2xl pr-1">X</h2>
     </button>
 </ul>
 <style>
@@ -112,6 +110,8 @@
         navMobile.classList.remove('hidden')
         navMobile.classList.add('flex')
     })
+    
+
 
     const exitNavMobile = document.querySelector('#exitNavMobile')
     exitNavMobile.addEventListener('click', () => {
