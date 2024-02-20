@@ -2,6 +2,6 @@
 const { id } = Astro.props;
 ---
 
-<a href="#contact" id=`botonContacto${id}` class={`${Astro.props.class} px-10 py-3 bg-[#00f0ff] rounded-full text-xl text-[#3f3f3f] text-center w-52 self-center hover:opacity-75 transition-opacity`}>
+<a href="#contact" id={id} class={`${Astro.props.class} px-10 py-3 bg-[#00f0ff] rounded-full text-xl text-[#3f3f3f] text-center w-52 self-center hover:opacity-75 transition-opacity botonContacto`}>
     contacto
 </a>
