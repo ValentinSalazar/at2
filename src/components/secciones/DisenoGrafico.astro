@@ -6,7 +6,7 @@ import SeparadorMobile from '../SeparadorMobile.astro';
 import TituloSeparador from '../TituloSeparador.astro';
 ---
 
-<section id="serviciosSection" class={`${Astro.props.class} w-screen flex flex-col relative pt-[80px] md:pt-[120px] md:pb-20`}>
+<section id="design" class={`${Astro.props.class} w-screen flex flex-col relative pt-[80px] md:pt-[120px] md:pb-20`}>
     <SeparadorMobile numero="01" class="md:hidden"/>
     <div class="absolute left-0 hidden md:flex h-2 items-center gap-5">
         <span class="bg-white w-28 border-2 left-0"></span>
@@ -63,6 +63,8 @@ import TituloSeparador from '../TituloSeparador.astro';
 
 <script>
     // @ts-nocheck
+    const links = document.querySelectorAll('.navLink')
+    const whatsapp = document.querySelector('#whatsapp')
     const logoA = document.querySelector('#logoA')
     const isotipoPath = document.querySelector('#isotipo')?.children[0]
     const logo = document.querySelectorAll('path')
@@ -73,7 +75,7 @@ import TituloSeparador from '../TituloSeparador.astro';
     const lineas = document.querySelectorAll('hr')
     const atributos = document.querySelectorAll('#atributo')
     const botones = document.querySelectorAll('#botonContacto')
-    const seccionCliente = document.querySelector('#clientesSection')
+    const seccionCliente = document.querySelector('#clients')
     const logotipo = document.querySelector('#botonLogotipo')
     const isotipo = document.querySelector('#botonIsotipo')
     const navMobile = document.querySelector('#navMobile')
@@ -132,7 +134,7 @@ import TituloSeparador from '../TituloSeparador.astro';
         })
 
         navMobile?.setAttribute('style', `background-color:${colorElegido};`)
-
+        whatsapp?.setAttribute('fill', `${colorElegido}`)
 
         comillas?.setAttribute('fill', `${colorElegido}`)
         seccionCliente?.setAttribute('style', `border-top:8px solid ${colorElegido};`)
@@ -146,9 +148,14 @@ import TituloSeparador from '../TituloSeparador.astro';
 
         ideasInnovadoras?.setAttribute('style', `color:${colorElegido};`)
         
-        
-
+        links.forEach(link => {
+            if (link.classList.contains('activeLink')) {
+                link.style.color = `${colorElegido}`
+            }
+        });
     });
+
+    
 </script>
 
 

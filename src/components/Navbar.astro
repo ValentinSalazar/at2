@@ -15,16 +15,16 @@
     </div>
     <ul class="hidden md:flex gap-5">
         <li>
-            <a href="#introSection" class="text-[#00F0FF] font-medium">inicio</a>
+            <a href="#home" class="navLink activeLink">inicio</a>
         </li>
         <li>
-            <a href="#serviciosSection">servicios</a>
+            <a href="#design" class="navLink">servicios</a>
         </li>
         <li>
-            <a href="#clientesSection">clientes</a>
+            <a href="#clients" class="navLink">clientes</a>
         </li>
         <li>
-            <a href="#contactoSection">contacto</a>
+            <a href="#contact" class="navLink">contacto</a>
         </li>
     </ul>
     <button id="btnMobile" class="md:hidden" type="button" name="menu">
@@ -80,14 +80,21 @@
     </button>
 </ul>
 <style>
-    .active {
+    html {
+        scroll-behavior: smooth;
+    }
+    .activeLink {
+        color: #00F0FF;
+        font-weight: 800;
+    }
+    /* .active {
         color: red;
         background-color: #2f2f2f;
         font-weight: bold;
         color: #fff;
         border-radius: 2px;
         transition: 0.2s;
-    }
+    } */
     #navMobile{
         box-shadow: -7px 5px 11px 0px rgba(0,0,0,0.5);
 -webkit-box-shadow: -7px 5px 11px 0px rgba(0,0,0,0.5);
@@ -95,7 +102,7 @@
     }
 </style>
 
-<script>
+<!-- <script>
     function toggleBlur() {
         if (window.scrollY > 90) {
             navCompleto.classList.add('backdrop-blur');
@@ -164,4 +171,45 @@
 
 
   });
+</script> -->
+
+
+<script>
+    const navCompleto = document.querySelector('nav')
+    const navLinks = document.querySelectorAll('.navLink')
+    const sections = document.querySelectorAll('section')
+
+
+    
+    let currentSection = 'home'
+
+    window.addEventListener('scroll', () => {
+        sections.forEach( section => {
+            if (window.scrollY > 90) {
+                navCompleto.classList.add('backdrop-blur');
+            } else {
+                navCompleto.classList.remove('backdrop-blur');
+            }
+            if((window.scrollY >= section.offsetTop - 50) && (section.id !== '')) {
+                currentSection = section.id;
+            }
+            
+        })
+
+
+        navLinks.forEach(link => {
+            if(link.href.includes(currentSection)) {
+                document.querySelector('.navLink')?.classList.remove('activeLink')
+                let colorsito = navCompleto.children[0].children[0].children[0].getAttribute('fill');
+                link.style.color = colorsito;
+                link.style.fontWeight = '800'
+            } else {
+                link.style.color = '#fff';
+                link.style.fontWeight = '400';
+            }
+        });
+    })
+
+    console.log(navCompleto.children[0].children[0].children[0])
+
 </script>
