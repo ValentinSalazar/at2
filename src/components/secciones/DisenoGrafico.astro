@@ -81,6 +81,50 @@ import TituloSeparador from '../TituloSeparador.astro';
     const navMobile = document.querySelector('#navMobile')
     const ideasInnovadoras = document.querySelector('#ideasInnovadoras')
 
+    const navCompleto = document.querySelector('nav')
+    const navLinks = document.querySelectorAll('.navLink')
+    const sections = document.querySelectorAll('section')
+    let currentSection = 'home'
+
+    function updateNavLinksStyle(color) {
+    navLinks.forEach(link => {
+        if (link.href.includes("#" + currentSection)) {
+            link.style.color = color;
+            link.style.fontWeight = '800';
+        } else {
+            link.style.color = '#fff';
+            link.style.fontWeight = '400';
+        }
+    });
+}
+
+
+    window.addEventListener('scroll', () => {
+        sections.forEach( section => {
+            if (window.scrollY > 90) {
+                navCompleto.classList.add('backdrop-blur');
+            } else {
+                navCompleto.classList.remove('backdrop-blur');
+            }
+            if((window.scrollY >= section.offsetTop - 50) && (section.id !== '')) {
+                currentSection = section.id;
+            }
+            
+        })
+
+        navLinks.forEach(link => {
+            if(link.href.includes(currentSection)) {
+                document.querySelector('.navLink')?.classList.remove('activeLink')
+                let colorsito = navCompleto.children[0].children[0].children[0].getAttribute('fill');
+                link.style.color = colorsito;
+                link.style.fontWeight = '800'
+            } else {
+                link.style.color = '#fff';
+                link.style.fontWeight = '400';
+            }
+        });
+    })
+
     let colorPicker = new iro.ColorPicker("#picker", {
         // Set the size of the color picker
         width: 160,
@@ -147,16 +191,11 @@ import TituloSeparador from '../TituloSeparador.astro';
         }
 
         ideasInnovadoras?.setAttribute('style', `color:${colorElegido};`)
-        
-        links.forEach(link => {
-            if (link.classList.contains('activeLink')) {
-                link.style.color = `${colorElegido}`
-            }
-        });
+        updateNavLinksStyle(colorElegido);
     });
-
-    
 </script>
+
+
 
 
 <script>
