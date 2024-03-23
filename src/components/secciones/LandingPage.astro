@@ -12,11 +12,11 @@ import TituloSeparador from "../TituloSeparador.astro";
     <div class="w-full flex items-center">
         <span class="w-[20%] h-[1px] border"></span>
         <h2 class="text-4xl font-black">03</h2>
-        <h1 class="text-4xl font-black text-center text-[#00f0ff]">LANDING PAGE</h1>
-        <span class="w-[37%] h-[1px] border"></span>
+        <h1 class="text-4xl font-black text-center text-[#00f0ff] lg:w-[30%]">LANDING PAGE</h1>
+        <span class="w-[37%] lg:w-[45%] h-[1px] border"></span>
     </div>
     <div class="flex items-center w-full">
-        <div class="flex items-center pr-1">
+        <div class="flex items-center pr-1 lg:pr-3">
             <Logo class="w-5 h-5" color="#00f0ff" />
             <h3>atenea</h3>
         </div>
@@ -25,7 +25,7 @@ import TituloSeparador from "../TituloSeparador.astro";
 </div>
 
     <div
-        class="bg-black/50 h-full flex flex-col items-center pb-20 md:flex-row md:pt-10 md:px-20"
+        class="bg-black/50 h-full flex flex-col items-center pb-20 md:flex-row md:pt-10 md:px-20 lg:h-[80vh]"
     >
         <SeparadorMobile numero="03" class="top-[-21px] md:hidden" />
         <TituloSeparador
@@ -40,11 +40,11 @@ import TituloSeparador from "../TituloSeparador.astro";
             con la última tecnología, optimizada y adaptada para funcionar en cualquier
             dispositivo movil.
         </p>
-        <img src="/landing.webp" alt="" class="my-5 md:absolute right-[-25%] md:z-10 md:scale-50 px-5 md:px-0" />
+        <img src="/landing.webp" alt="" class="my-5 md:absolute right-[-25%] md:z-10 md:scale-50 px-5 md:px-0 lg:scale-75" />
         <div class="flex-col md:order-[-1] md:w-[50%] relative z-20 pt-10">
             <h2 class="font-light text-4xl leading-none relative top-3 hidden md:flex">PAGINA</h2>
             <h1 class="text-9xl font-black leading-none hidden md:flex md:mb-5">WEB</h1>
-            <p class="hidden md:flex max-w-sm md:my-5 md:text-lg text-balance">Tu propia página web, construida con la última
+            <p class="hidden md:flex max-w-sm md:my-5 md:text-lg text-balance lg:max-w-2xl">Tu propia página web, construida con la última
                 tecnología, optimizada y adaptada para funcionar
                 en cualquier dispositivo movil.</p>
             <h1 class="text-center mb-5 font-black text-3xl text-[#00f0ff] md:text-left">
