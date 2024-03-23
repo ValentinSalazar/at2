@@ -6,7 +6,7 @@ export default {
 			'xs': {'min': '320px', 'max':'380px'},
 			'sm': '576px',
 			'md': '768px',
-			'lg': {'min': '1024px'}
+			'lg': { 'raw': '( min-width: 1024px ) and ( min-height: 1024px )' },
 			},
 		extend: {},
 	},
